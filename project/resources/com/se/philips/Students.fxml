@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="775.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <StackPane BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="600.0" prefWidth="852.0" scaleX="0.5" />
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

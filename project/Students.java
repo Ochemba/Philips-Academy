@@ -1,0 +1,28 @@
+package com.se.philips;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class Students extends Application {
+    @Override
+    public void start(Stage stage) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("dashb/Students.fxml"));
+        Scene scene = new Scene(root,800,600);
+        stage.setTitle("Hello");
+        stage.setScene(scene);
+        stage.setMinWidth(640);
+        stage.setMinHeight(480);
+        stage.setResizable(true);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+}
+

@@ -1,0 +1,42 @@
+.combo-box .list-cell {
+    -fx-padding: 6 12;
+    -fx-background-radius: 20;
+    -fx-font-weight: 500;
+}
+
+/* Selected item text color */
+.combo-box .list-cell:filled:selected {
+    -fx-text-fill: white;
+}
+
+/* Difficulty styles */
+.beginner {
+    -fx-background-color: #e6f4ea;
+    -fx-text-fill: #28a745;
+}
+.beginner:hover {
+    -fx-background-color: #cce3d5;
+}
+
+.intermediate {
+    -fx-background-color: #fff3e0;
+    -fx-text-fill: #fd7e14;
+}
+.intermediate:hover {
+    -fx-background-color: #ffe0b2;
+}
+
+.advanced {
+    -fx-background-color: #fcebea;
+    -fx-text-fill: #dc3545;
+}
+.advanced:hover {
+    -fx-background-color: #f8d7da;
+}
+
+/* Optional: pointer cursor */
+.beginner:hover,
+.intermediate:hover,
+.advanced:hover {
+    -fx-cursor: hand;
+}

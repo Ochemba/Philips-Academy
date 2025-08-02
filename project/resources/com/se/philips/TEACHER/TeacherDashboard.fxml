@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="Border" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1290.0" style="-fx-background-color: #f0f1f5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.se.philips.TEACHER.TeacherDashboardController">
+   <left>
+      <VBox focusTraversable="true" prefHeight="556.0" prefWidth="160.0" spacing="11.0" style="-fx-background-color: #4e89b8; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="27.0" prefWidth="162.0">
+               <children>
+                  <Label style="-fx-text-fill: WHITE;" text="Philps Academy" textFill="WHITE" translateY="5.0">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BARS" translateX="24.0" translateY="7.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <Region prefHeight="5.0" prefWidth="162.0" translateY="7.0" />
+            <HBox fx:id="Dashboard1" layoutX="10.0" layoutY="188.0" prefHeight="27.0" prefWidth="162.0" />
+            <HBox fx:id="Dashboard" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="162.0" translateY="-11.0">
+               <children>
+                  <FontAwesomeIconView fill="#f7f0f0" glyphName="HOME" size="17" translateY="6.0" wrappingWidth="18.185708045959473" />
+                  <JFXButton onAction="#Dash" style="-fx-background-color: transparent; -fx-text-fill: WHITE;" text="Dashboard" translateX="4.0" />
+               </children>
+            </HBox>
+            <HBox fx:id="Students" layoutX="10.0" layoutY="37.0" prefHeight="27.0" prefWidth="162.0" translateY="-11.0">
+               <children>
+                  <FontAwesomeIconView fill="#f7f6f6" glyphName="BOOK" translateX="18.0" translateY="8.0" />
+                  <JFXButton onAction="#Students" style="-fx-background-color: transparent; -fx-text-fill: WHITE;" text="My Courses" translateX="4.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="64.0" prefHeight="27.0" prefWidth="162.0" translateY="-11.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CLIPBOARD" translateX="18.0" translateY="8.0" />
+                  <JFXButton onAction="#Teachers" style="-fx-background-color: transparent; -fx-text-fill: WHITE;" text="Home Work" translateX="4.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="180.0" prefHeight="27.0" prefWidth="162.0" translateY="-13.0">
+               <children>
+                  <JFXButton onAction="#Course" style="-fx-background-color: transparent; -fx-text-fill: WHITE;" text="Course" translateX="4.0" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="BOOK" tabSize="12" translateX="24.0" translateY="8.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="64.0" prefHeight="27.0" prefWidth="162.0" translateY="-11.0">
+               <children>
+                  <JFXButton onAction="#Calendar" style="-fx-background-color: transparent; -fx-text-fill: WHITE;" text="Calender" translateX="4.0" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR_ALT" strokeWidth="5.0" translateX="13.0" translateY="7.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="64.0" prefHeight="27.0" prefWidth="162.0" translateY="-11.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="15" tabSize="11" text="" translateX="15.0" translateY="6.0" wrappingWidth="22.250001907348633" />
+                  <JFXButton onAction="#Finance" style="-fx-background-color: transparent; -fx-text-fill: WHITE;" text="Finance" translateX="4.0" />
+               </children>
+            </HBox>
+            <HBox fx:id="Notice" layoutX="10.0" layoutY="64.0" prefHeight="27.0" prefWidth="162.0" translateY="-11.0">
+               <children>
+                  <JFXButton onAction="#Notice" style="-fx-background-color: transparent; -fx-text-fill: WHITE;" text="Notice" translateX="4.0" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="BELL" translateX="22.0" translateY="8.0" />
+               </children>
+            </HBox>
+            <HBox fx:id="Message" layoutX="10.0" layoutY="92.0" prefHeight="29.0" prefWidth="162.0" translateY="-11.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ENVELOPE" translateX="10.0" translateY="8.0" />
+                  <JFXButton onAction="#Message" style="-fx-background-color: transparent; -fx-text-fill: WHITE;" text="Message" translateX="4.0" />
+               </children>
+            </HBox>
+            <Region prefHeight="55.0" prefWidth="162.0" translateY="15.0" VBox.vgrow="ALWAYS" />
+            <VBox prefHeight="163.0" prefWidth="162.0" scaleY="0.9" spacing="5.0" translateY="-23.0">
+               <children>
+                  <Label style="-fx-text-fill: white;" text="Others" translateX="10.0" />
+                  <HBox fx:id="Profile" layoutX="10.0" prefHeight="31.0" prefWidth="162.0">
+                     <children>
+                        <JFXButton onAction="#Profile" style="-fx-background-color: transparent; -fx-text-fill: WHITE;" text="Profile" translateX="3.8" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER" translateX="5.0" translateY="6.0" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="LogOut" layoutX="10.0" layoutY="72.0" prefHeight="29.0" prefWidth="162.0">
+                     <children>
+                        <JFXButton fx:id="logoutButton" onAction="#LogOut" style="-fx-background-color: transparent; -fx-text-fill: WHITE;" text="Log Out" translateX="3.8" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" translateX="3.0" translateY="8.0" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="welcomeLabel" style="-fx-font-size: 16px; -fx-text-fill: white;" text="Welcome" translateX="12.0" translateY="6.0" />
+
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="9.0" left="3.0" top="8.0" />
+         </BorderPane.margin>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+   </left>
+   <center>
+      <StackPane fx:id="content" prefHeight="150.0" prefWidth="366.0" style="-fx-background-color: #f0f1f5;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="214.0" prefWidth="418.0" text="homepage" />
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

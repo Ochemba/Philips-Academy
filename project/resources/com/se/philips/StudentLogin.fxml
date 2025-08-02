@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="Infinity" maxWidth="Infinity" prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.se.philips.StudentLoginController">
+
+   <!-- Left Sidebar (fixed width, responsive height) -->
+   <left>
+      <VBox maxWidth="213" minWidth="209.0" prefHeight="600.0" prefWidth="209.0" style="-fx-background-color: #4e89b8;">
+
+         <!-- Top spacer -->
+         <Region VBox.vgrow="ALWAYS" />
+
+         <!-- Logo (centered horizontally) -->
+         <ImageView fitHeight="150" fitWidth="200" preserveRatio="true" translateX="19.0">
+            <VBox.margin>
+               <Insets left="6.5" />
+            </VBox.margin>
+            <image>
+               <Image url="@../../../image/Logo.png" />
+            </image>
+         </ImageView>
+
+         <!-- Middle spacer -->
+         <Region VBox.vgrow="ALWAYS" />
+
+
+         <!-- Copyright (fixed at bottom) -->
+         <Label text="CopyRight (c). All Rights Reserved" textFill="WHITE">
+            <VBox.margin>
+               <Insets bottom="10" left="20" />
+            </VBox.margin>
+         </Label>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <!-- Back button (top-right) -->
+         <Label fx:id="BackLabel" onMouseClicked="#Back" style="-fx-text-fill: #4e89b8; -fx-font-weight: bold; -fx-cursor: hand;" text="Back" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20" />
+
+         <!-- Login Form (centered) -->
+         <VBox alignment="CENTER" spacing="20" AnchorPane.bottomAnchor="100" AnchorPane.leftAnchor="100" AnchorPane.rightAnchor="100" AnchorPane.topAnchor="100">
+            <Label text="Secure Login" translateX="-12.0" translateY="-14.0">
+               <font>
+                  <Font name="Bookman Old Style" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabel" prefHeight="18.0" prefWidth="82.0" textFill="CADETBLUE" translateX="-10.0" translateY="-13.0" />
+
+            <!-- Username Field -->
+            <VBox maxWidth="400" spacing="5">
+               <HBox alignment="CENTER_LEFT" spacing="10">
+                  <Label minWidth="80" text="Matric ID">
+                     <font>
+                        <Font name="Bookman Old Style" size="12.0" />
+                     </font></Label>
+                  <TextField fx:id="matricField" focusTraversable="false" maxWidth="Infinity" prefHeight="25.0" prefWidth="203.0" promptText="Matric Number" style="-fx-background-color: transparent;" />
+               </HBox>
+               <Separator scaleX="0.53" translateX="-2.0" translateY="-6.0" />
+            </VBox>
+
+            <!-- Password Field -->
+            <VBox maxWidth="400" prefHeight="29.0" prefWidth="384.0" spacing="5" translateY="-1.0">
+               <HBox alignment="CENTER_LEFT" spacing="10">
+                  <Label minWidth="80" text="Password:" />
+                  <PasswordField fx:id="passwordField" focusTraversable="false" maxWidth="Infinity" prefHeight="26.0" prefWidth="206.0" promptText="Password" style="-fx-background-color: transparent;" />
+               </HBox>
+               <Separator scaleX="0.53" translateX="3.0" translateY="-6.0" />
+            </VBox>
+
+            <!-- Login Button -->
+            <Button fx:id="loginButton" maxWidth="200" onAction="#onLoginClick" onMouseClicked="#StudentDash" prefHeight="35.0" prefWidth="0.0" scaleX="0.6" style="-fx-base: #4E89B8FF; -fx-background-radius: 9; -fx-text-fill: WHITE;" text="Login" textFill="WHITE" translateX="-1.0">
+               <font>
+                  <Font name="Bookman Old Style" size="19.0" />
+               </font></Button>
+         </VBox>
+         <Region layoutX="14.0" layoutY="200.0" prefHeight="200.0" prefWidth="76.0" />
+         <Region layoutX="490.0" layoutY="170.0" prefHeight="200.0" prefWidth="76.0" />
+      </AnchorPane>
+   </center>
+</BorderPane>

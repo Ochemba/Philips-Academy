@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.se.philips.STUDENT.StudentPaymentController">
+
+    <!-- Main vertical layout -->
+    <VBox prefHeight="600" prefWidth="800" spacing="20" style="-fx-padding: 20;">
+
+        <!-- Top HBox: Payment Form and Fee Summary -->
+        <HBox alignment="TOP_LEFT" spacing="50.0">
+
+            <!-- Left: Payment Form -->
+            <VBox alignment="TOP_LEFT" prefWidth="350" spacing="10">
+                <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Student Payment Portal" />
+                <TextField fx:id="matricIdField" promptText="Enter Matric ID" />
+                <TextField fx:id="amountField" promptText="Enter Amount to Pay" />
+                <TextField fx:id="purposeField" promptText="Payment Purpose (e.g. Tuition, Library)" />
+                <Button onAction="#handlePayNow" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Pay Now" />
+            </VBox>
+
+            <!-- Right: Fee Summary -->
+            <VBox alignment="TOP_LEFT" spacing="15">
+                <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Payment Summary" />
+                <Label fx:id="totalFeeLabel" text="Total Fee: ₦500,000" />
+                <Label fx:id="paidSoFarLabel" text="Paid: ₦0" />
+                <Label fx:id="balanceLabel" style="-fx-text-fill: red;" text="Balance: ₦500,000" />
+            </VBox>
+
+        </HBox>
+
+        <!-- Bottom: Payment History Table -->
+        <VBox spacing="10">
+            <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Payment History" />
+            <TableView fx:id="paymentTable" prefHeight="250" stylesheets="@../css/tableview.css">
+                <columns>
+                    <TableColumn fx:id="dateCol" prefWidth="100" text="Date" />
+                    <TableColumn fx:id="amountCol" prefWidth="100" text="Amount" />
+               <TableColumn fx:id="invoiceCol" prefWidth="150" text="Invoice" />
+                    <TableColumn fx:id="purposeCol" prefWidth="150" text="Purpose" />
+                    <TableColumn fx:id="statusCol" prefWidth="100" text="Status" />
+                    <TableColumn fx:id="balanceCol" prefWidth="100" text="Balance" />
+                </columns>
+            </TableView>
+        </VBox>
+
+    </VBox>
+</AnchorPane>

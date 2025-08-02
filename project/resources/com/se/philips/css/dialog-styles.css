@@ -1,0 +1,34 @@
+.dialog-pane {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 8, 0, 0, 4);
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: transparent;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 10px 0;
+}
+
+.dialog-pane .button-bar .button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-text-fill: black;
+    -fx-padding: 6 20 6 20;
+}
+
+.dialog-pane .button-bar .button:cancel {
+    -fx-background-color: #e0e0e0;
+}
+
+.dialog-pane .button-bar .button:default {
+    -fx-background-color: #5ca8a5;
+    -fx-text-fill: white;
+}

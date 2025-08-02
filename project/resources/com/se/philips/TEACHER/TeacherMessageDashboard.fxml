@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.se.philips.TEACHER.TeacherMessageController"
+            style="-fx-background-color: #f4f6f8; -fx-font-family: 'Segoe UI';">
+
+    <!-- Top Header Bar -->
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT"
+              style="-fx-padding: 15; -fx-background-color: #2c3e50;">
+            <Label text="📨 Admin Messaging Center"
+                   style="-fx-font-size: 20px; -fx-text-fill: white; -fx-font-weight: bold;" />
+        </HBox>
+    </top>
+
+    <!-- Center: Message Display Area -->
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-padding: 10;">
+            <VBox fx:id="messageList" spacing="15"
+                  style="-fx-padding: 5;" />
+        </ScrollPane>
+    </center>
+
+    <!-- Bottom: Compose Message Area -->
+    <bottom>
+        <VBox spacing="10" style="-fx-padding: 15; -fx-background-color: #ecf0f1;">
+            <!-- Receiver & Attach -->
+            <HBox spacing="10">
+                <TextField fx:id="receiverField"
+                           promptText="Send to (Student/Teacher ID)"
+                           style="-fx-pref-width: 300; -fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 8;" />
+                <Button text="📎 Attach File"
+                        onAction="#handleAttachFile"
+                        style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-border-radius: 5; -fx-padding: 8;" />
+            </HBox>
+
+            <!-- Message Text Area -->
+            <TextArea fx:id="messageField"
+                      promptText="Type your message here..."
+                      style="-fx-pref-height: 100; -fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 8;" />
+
+            <!-- Send Button -->
+            <HBox alignment="CENTER_RIGHT">
+                <Button text="Send"
+                        onAction="#handleSendMessage"
+                        style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-border-radius: 5; -fx-padding: 8 20;" />
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

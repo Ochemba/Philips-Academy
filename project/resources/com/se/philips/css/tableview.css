@@ -1,0 +1,23 @@
+/*.table-view .column-header {*/
+/*    -fx-background-color: #E5E7EB;  !* Light gray background *!*/
+/*    -fx-border-color: transparent;*/
+/*}*/
+
+/*.table-view .column-header .label {*/
+/*    -fx-text-fill: #1E293B;         !* Dark slate text *!*/
+/*    -fx-font-size: 14px;*/
+/*    -fx-font-weight: bold;*/
+/*    -fx-padding: 8px;*/
+/*}*/
+
+.table-view .column-header {
+    -fx-background-color: #F0F9FF;     /* Matches light theme */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #1E293B;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+

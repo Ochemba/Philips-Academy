@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="Infinity" maxWidth="Infinity" prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.se.philips.Admin.AdminLoginController">
+
+   <!-- Left Sidebar (fixed width, responsive height) -->
+   <left>
+      <VBox maxWidth="213" minWidth="209.0" prefHeight="600.0" prefWidth="209.0" style="-fx-background-color: #4e89b8;">
+
+         <!-- Top spacer -->
+         <Region VBox.vgrow="ALWAYS" />
+
+         <!-- Logo (centered horizontally) -->
+         <ImageView fitHeight="150" fitWidth="200" preserveRatio="true" translateX="19.0">
+            <VBox.margin>
+               <Insets left="6.5" />
+            </VBox.margin>
+            <image>
+               <Image url="@../../../image/Logo.png" />
+            </image>
+         </ImageView>
+
+         <!-- Middle spacer -->
+         <Region VBox.vgrow="ALWAYS" />
+
+         <!-- Copyright (fixed at bottom) -->
+         <Label text="CopyRight (c). All Rights Reserved" textFill="WHITE">
+            <VBox.margin>
+               <Insets bottom="10" left="20" />
+            </VBox.margin>
+         </Label>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <!-- Back button (top-right) -->
+         <Label fx:id="BackLabel" onMouseClicked="#Back" style="-fx-text-fill: #4e89b8; -fx-font-weight: bold; -fx-cursor: hand;" text="Back" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20" />
+
+         <!-- Login Form (centered) -->
+         <VBox alignment="CENTER" fillWidth="false" layoutX="180.0" layoutY="126.0" prefHeight="434.0" prefWidth="370.0" spacing="20" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 15; -fx-border-width: 2; -fx-alignment: center;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="164.0" AnchorPane.topAnchor="126.0">
+            <Region prefHeight="39.0" prefWidth="379.0" />
+            <Label text="Secure Login" translateX="-12.0" translateY="-14.0">
+               <font>
+                  <Font name="Bookman Old Style" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="loginMessageLabel" layoutX="152.0" layoutY="119.0" prefHeight="20.0" prefWidth="172.0" textFill="#4e89b8" translateY="-7.0">
+               <font>
+                  <Font name="Bookman Old Style" size="17.0" />
+               </font>
+            </Label>
+
+            <!-- Username Field -->
+            <VBox maxWidth="400" spacing="5">
+               <HBox alignment="CENTER_LEFT" spacing="10">
+                  <Label minWidth="80" text="Name" translateX="3.0">
+                     <font>
+                        <Font name="Bookman Old Style" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="AdminName" focusTraversable="false" maxWidth="Infinity" prefHeight="25.0" prefWidth="203.0" promptText="Name" style="-fx-background-color: transparent;" />
+               </HBox>
+               <Separator scaleX="0.53" translateX="-2.0" translateY="-6.0" />
+            </VBox>
+
+            <!-- Password Field -->
+            <VBox maxWidth="400" prefHeight="29.0" prefWidth="384.0" spacing="5" translateY="-1.0">
+               <HBox alignment="CENTER_LEFT" spacing="10">
+                  <Label minWidth="80" text="Password:" translateX="3.0" />
+                  <PasswordField fx:id="password" focusTraversable="false" maxWidth="Infinity" prefHeight="26.0" prefWidth="206.0" promptText="Password" style="-fx-background-color: transparent;" />
+               </HBox>
+               <Separator scaleX="0.53" translateX="3.0" translateY="-6.0" />
+            </VBox>
+
+            <!-- Login Button -->
+            <Button fx:id="loginButton" maxWidth="200" onAction="#loginButtonOnAction" prefHeight="36.0" prefWidth="124.0" scaleX="0.6" style="-fx-base: #4e89b8; -fx-background-radius: 9; -fx-text-fill: WHITE;" text="Login" textFill="WHITE" translateX="-1.0">
+               <font>
+                  <Font name="Bookman Old Style" size="19.0" />
+               </font>
+            </Button>
+            <Region prefHeight="36.0" prefWidth="379.0" />
+            <effect>
+               <DropShadow height="23.34" spread="0.17" width="18.66" />
+            </effect>
+            <padding>
+               <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+            </padding>
+         </VBox>
+         <Region layoutX="53.0" layoutY="94.0" prefHeight="439.0" prefWidth="107.0" AnchorPane.bottomAnchor="66.80000000000001" AnchorPane.rightAnchor="606.1999999999999" AnchorPane.topAnchor="94.00000000000006" />
+      </AnchorPane>
+   </center>
+</BorderPane>

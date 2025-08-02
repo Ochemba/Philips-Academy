@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="15.0" style="-fx-background-color: #ffffff; -fx-padding: 20; -fx-border-radius: 8;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.se.philips.AdminDashboard.Payment.AdBox.DialogBoxController">
+
+    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Pay Admin Bill" />
+   <TextField fx:id="titleField" focusTraversable="false" layoutX="30.0" layoutY="72.0" maxWidth="300" promptText="Enter bill title" />
+    <TextField fx:id="amountField" focusTraversable="false" maxWidth="300" promptText="Enter amount (e.g. 2500.00)" />
+   <TextField fx:id="PurposeField" focusTraversable="false" layoutX="30.0" layoutY="195.0" maxWidth="300" promptText="Purpose" />
+
+    <HBox alignment="CENTER" spacing="10">
+        <Button onAction="#handleCancel" text="Cancel" />
+        <Button defaultButton="true" onAction="#handlePay" text="Pay" />
+    </HBox>
+
+</VBox>
